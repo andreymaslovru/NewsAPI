@@ -14,6 +14,8 @@
 		9F3CCB80271587DC00BE7268 /* NewsAPI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F3CCB7E271587DC00BE7268 /* NewsAPI.xcdatamodeld */; };
 		9F3CCB82271587DE00BE7268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F3CCB81271587DE00BE7268 /* Assets.xcassets */; };
 		9F3CCB85271587DE00BE7268 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F3CCB83271587DE00BE7268 /* LaunchScreen.storyboard */; };
+		9F3CCB8D2715886C00BE7268 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3CCB8C2715886C00BE7268 /* Model.swift */; };
+		9F3CCB8F27158A3B00BE7268 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3CCB8E27158A3B00BE7268 /* ApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		9F3CCB81271587DE00BE7268 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F3CCB84271587DE00BE7268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F3CCB86271587DE00BE7268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F3CCB8C2715886C00BE7268 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		9F3CCB8E27158A3B00BE7268 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		9F3CCB74271587DC00BE7268 /* NewsAPI */ = {
 			isa = PBXGroup;
 			children = (
+				9F3CCB8C2715886C00BE7268 /* Model.swift */,
+				9F3CCB8E27158A3B00BE7268 /* ApiService.swift */,
 				9F3CCB75271587DC00BE7268 /* AppDelegate.swift */,
 				9F3CCB77271587DC00BE7268 /* SceneDelegate.swift */,
 				9F3CCB79271587DC00BE7268 /* ViewController.swift */,
@@ -141,7 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F3CCB8D2715886C00BE7268 /* Model.swift in Sources */,
 				9F3CCB7A271587DC00BE7268 /* ViewController.swift in Sources */,
+				9F3CCB8F27158A3B00BE7268 /* ApiService.swift in Sources */,
 				9F3CCB76271587DC00BE7268 /* AppDelegate.swift in Sources */,
 				9F3CCB78271587DC00BE7268 /* SceneDelegate.swift in Sources */,
 				9F3CCB80271587DC00BE7268 /* NewsAPI.xcdatamodeld in Sources */,
