@@ -13,7 +13,7 @@ class ApiService {
     func getNewsData(completion: @escaping (Result<Articles, Error>) -> Void) {
         
         struct Const {
-            static let url = URL(string: "https://newsapi.org/v2/everything?q=ios&from=2019-04-00&sortBy=publi shedAt&apiKey=26eddb253e7840f988aec61f2ece2907&page=​1")
+            static let url = URL(string: "https://newsapi.org/v2/everything?q=ios&from=2019-04-00&sortBy=publishedAt&apiKey=26eddb253e7840f988aec61f2ece2907&page=​1")
         }
         
         guard Const.url != nil else {return print("!!!!!")}
