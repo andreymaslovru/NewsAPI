@@ -12,6 +12,7 @@ class NewsTableViewCell: UITableViewCell{
     @IBOutlet weak var titleNews: UILabel!
     @IBOutlet weak var descriptionNews: UILabel!
     @IBOutlet weak var imageNewsCell: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,16 +30,18 @@ class NewsTableViewCell: UITableViewCell{
     
     func selCellWithValuesOf(_ article: Article) {
         updateUI(title: article.title, description: article.description,
-                 imageUrl: article.urlToImage
+                 imageUrl: article.urlToImage,
+                 dateNews: article.publishedAt
         )
     }
     
     //Update VIEW-UI
     
-    private func updateUI(title: String?, description: String?, imageUrl: String?
+    private func updateUI(title: String?, description: String?, imageUrl: String?, dateNews: String?
     ) {
         self.titleNews.text = title
         self.descriptionNews.text = description
+        self.dateLabel.text = dateNews
         //self.imageNews.image = imageUrl
         
         guard let urlString = imageUrl else { return }
