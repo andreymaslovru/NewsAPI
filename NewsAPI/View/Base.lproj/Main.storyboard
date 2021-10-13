@@ -37,19 +37,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrd-p3-47J">
-                                                    <rect key="frame" x="20" y="11" width="201" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrd-p3-47J">
+                                                    <rect key="frame" x="20" y="11" width="201" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="201" id="i7n-Ha-3Zw"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DW-xg-zha">
-                                                    <rect key="frame" x="20" y="40" width="87.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="20" y="39.5" width="199" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I6p-jr-VoT">
@@ -68,7 +68,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="I6p-jr-VoT" secondAttribute="trailing" constant="20" symbolic="YES" id="Qri-pT-czm"/>
                                                 <constraint firstItem="Rrd-p3-47J" firstAttribute="leading" secondItem="Glv-jM-qmG" secondAttribute="leading" constant="20" symbolic="YES" id="TAT-NN-51X"/>
                                                 <constraint firstItem="I6p-jr-VoT" firstAttribute="leading" secondItem="Rrd-p3-47J" secondAttribute="trailing" constant="8" symbolic="YES" id="U5o-he-Hut"/>
-                                                <constraint firstItem="I6p-jr-VoT" firstAttribute="leading" secondItem="2DW-xg-zha" secondAttribute="trailing" constant="121.5" id="XXe-FW-OhV"/>
+                                                <constraint firstItem="I6p-jr-VoT" firstAttribute="leading" secondItem="2DW-xg-zha" secondAttribute="trailing" constant="10" id="XXe-FW-OhV"/>
                                                 <constraint firstAttribute="bottom" secondItem="I6p-jr-VoT" secondAttribute="bottom" constant="11" id="tSI-Fb-07g"/>
                                                 <constraint firstItem="Rrd-p3-47J" firstAttribute="top" secondItem="Glv-jM-qmG" secondAttribute="top" constant="11" id="tmI-Ej-4p0"/>
                                             </constraints>
