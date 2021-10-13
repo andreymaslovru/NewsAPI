@@ -12,15 +12,23 @@ class ViewController: UIViewController {
     var apiService = ApiService()
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var indicatorLoadingProcess: UIActivityIndicatorView!
     
     private var viewModel = NewsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        indicatorLoadingProcess.isHidden = false
+        indicatorLoadingProcess.startAnimating()
         self.tableView.delegate = self
         
         apiService.getNewsData { (result) in
             
+            DispatchQueue.main.async {
+                self.indicatorLoadingProcess.stopAnimating()
+                self.indicatorLoadingProcess.isHidden = true
+                self.tableView.reloadData()
+            }
         }
         
         loadData()

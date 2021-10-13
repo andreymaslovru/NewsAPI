@@ -42,7 +42,6 @@ class NewsTableViewCell: UITableViewCell{
         self.titleNews.text = title
         self.descriptionNews.text = description
         self.dateLabel.text = convertDateISOtoFormat(date: dateNews)
-        print(self.dateLabel.text)
         //self.imageNews.image = imageUrl
         
         guard let urlString = imageUrl else { return }

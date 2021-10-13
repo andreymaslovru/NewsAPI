@@ -97,6 +97,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="HQ0-6O-M7g">
+                                <rect key="frame" x="197" y="85" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -105,12 +108,17 @@
                             <constraint firstItem="tp3-3h-gev" firstAttribute="top" secondItem="sds-nt-HYG" secondAttribute="bottom" constant="8" symbolic="YES" id="7s3-8l-rje"/>
                             <constraint firstItem="sds-nt-HYG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7yn-b2-bsL"/>
                             <constraint firstItem="sds-nt-HYG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="D5Z-DM-nsa"/>
+                            <constraint firstItem="HQ0-6O-M7g" firstAttribute="width" secondItem="tp3-3h-gev" secondAttribute="width" multiplier="0.0483092" id="FOF-8v-G1X"/>
+                            <constraint firstItem="HQ0-6O-M7g" firstAttribute="centerX" secondItem="tp3-3h-gev" secondAttribute="centerX" id="KnO-aP-jqU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tp3-3h-gev" secondAttribute="trailing" id="VwZ-OW-uX2"/>
                             <constraint firstItem="tp3-3h-gev" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="aZW-1Z-Xf6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sds-nt-HYG" secondAttribute="trailing" id="bvD-1c-keY"/>
+                            <constraint firstItem="HQ0-6O-M7g" firstAttribute="top" secondItem="tp3-3h-gev" secondAttribute="top" id="pKv-N1-3aC"/>
+                            <constraint firstItem="HQ0-6O-M7g" firstAttribute="height" secondItem="tp3-3h-gev" secondAttribute="height" multiplier="0.0246609" id="vcj-py-c7D"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="indicatorLoadingProcess" destination="HQ0-6O-M7g" id="len-TH-7yn"/>
                         <outlet property="tableView" destination="tp3-3h-gev" id="9x8-9Z-gAW"/>
                     </connections>
                 </viewController>
