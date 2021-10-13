@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         self.tableView.delegate = self
         
         apiService.getNewsData { (result) in
-            print(result)
+            
         }
         
         loadData()

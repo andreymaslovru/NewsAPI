@@ -42,6 +42,7 @@ class NewsTableViewCell: UITableViewCell{
         self.titleNews.text = title
         self.descriptionNews.text = description
         self.dateLabel.text = convertDateISOtoFormat(date: dateNews)
+        print(self.dateLabel.text)
         //self.imageNews.image = imageUrl
         
         guard let urlString = imageUrl else { return }
@@ -77,12 +78,14 @@ class NewsTableViewCell: UITableViewCell{
     
     private func  convertDateISOtoFormat(date: String?) -> String {
         var fixDate = ""
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let inputFormatter = ISO8601DateFormatter()
+        inputFormatter.formatOptions = [
+            .withFractionalSeconds,
+            .withFullDate
+        ]
         if let originDate = date {
-            if let newDate = dateFormatter.date(from: originDate) {
-                dateFormatter.dateFormat = "dd.MM.yyyy"
-                fixDate = dateFormatter.string(from: newDate)
+            if let newDate = inputFormatter.date(from: originDate) {
+                fixDate = inputFormatter.string(from: newDate)
             }
         }
         return fixDate

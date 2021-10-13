@@ -13,11 +13,11 @@ import Foundation
 class ApiService {
     private var dataTask: URLSessionDataTask?
     
-    let url = URL(string: "https://newsapi.org/v2/top-headlines?country=US&apiKey=eda6154a62744b7bbad849130a7f7b6f")
+    let url = URL(string: "https://newsapi.org/v2/everything?q=ios&from=2019-04-00&sortBy=publishedAt&apiKey=26eddb253e7840f988aec61f2ece2907&page=3")
     
     
     func getNewsData(completion: @escaping (Result<Articles, Error>) -> Void) {
-        print(url)
+      
         guard url != nil else { return print("dkgjkegje")}
         //Create URL Session
         
