@@ -16,6 +16,7 @@
 		9F3CCB85271587DE00BE7268 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F3CCB83271587DE00BE7268 /* LaunchScreen.storyboard */; };
 		9F3CCB8D2715886C00BE7268 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3CCB8C2715886C00BE7268 /* Model.swift */; };
 		9F3CCB8F27158A3B00BE7268 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3CCB8E27158A3B00BE7268 /* ApiService.swift */; };
+		9F3CCB9127168A1C00BE7268 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3CCB9027168A1C00BE7268 /* NewsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		9F3CCB86271587DE00BE7268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F3CCB8C2715886C00BE7268 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9F3CCB8E27158A3B00BE7268 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		9F3CCB9027168A1C00BE7268 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				9F3CCB8C2715886C00BE7268 /* Model.swift */,
 				9F3CCB8E27158A3B00BE7268 /* ApiService.swift */,
+				9F3CCB9027168A1C00BE7268 /* NewsViewModel.swift */,
 				9F3CCB75271587DC00BE7268 /* AppDelegate.swift */,
 				9F3CCB77271587DC00BE7268 /* SceneDelegate.swift */,
 				9F3CCB79271587DC00BE7268 /* ViewController.swift */,
@@ -151,6 +154,7 @@
 				9F3CCB7A271587DC00BE7268 /* ViewController.swift in Sources */,
 				9F3CCB8F27158A3B00BE7268 /* ApiService.swift in Sources */,
 				9F3CCB76271587DC00BE7268 /* AppDelegate.swift in Sources */,
+				9F3CCB9127168A1C00BE7268 /* NewsViewModel.swift in Sources */,
 				9F3CCB78271587DC00BE7268 /* SceneDelegate.swift in Sources */,
 				9F3CCB80271587DC00BE7268 /* NewsAPI.xcdatamodeld in Sources */,
 			);

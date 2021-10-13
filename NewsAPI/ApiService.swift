@@ -7,21 +7,23 @@
 
 import Foundation
 
+ 
+
+
 class ApiService {
     private var dataTask: URLSessionDataTask?
     
+    let url = URL(string: "https://newsapi.org/v2/top-headlines?country=US&apiKey=eda6154a62744b7bbad849130a7f7b6f")
+    
+    
     func getNewsData(completion: @escaping (Result<Articles, Error>) -> Void) {
         
-        struct Const {
-            static let url = URL(string: "https://newsapi.org/v2/everything?q=ios&from=2019-04-00&sortBy=publishedAt&apiKey=26eddb253e7840f988aec61f2ece2907&page=​1")
-        }
+        print(url)
         
-        guard Const.url != nil else {return print("!!!!!")}
-        
-        
+        guard url != nil else { return print("dkgjkegje")}
         //Create URL Session
         
-        dataTask = URLSession.shared.dataTask(with: Const.url!) { (data, response, error) in
+        dataTask = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             //Handle Error
             if let error = error {
                 completion(.failure(error))
