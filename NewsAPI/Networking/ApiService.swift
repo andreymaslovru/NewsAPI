@@ -18,8 +18,6 @@ class ApiService {
     
     func getNewsData(completion: @escaping (Result<Articles, Error>) -> Void) {
         
-        print(url)
-        
         guard url != nil else { return print("dkgjkegje")}
         //Create URL Session
         
