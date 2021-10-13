@@ -11,11 +11,12 @@ class NewsTableViewCell: UITableViewCell{
 
     @IBOutlet weak var titleNews: UILabel!
     @IBOutlet weak var descriptionNews: UILabel!
-    @IBOutlet weak var imageNews: UIImageView!
+    @IBOutlet weak var imageNewsCell: UIImageView!
     
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        imageNewsCell.layer.cornerRadius = 10
+    }
 //
 //    override func setSelected(_ selected: Bool, animated: Bool) {
 //        super.setSelected(selected, animated: animated)
@@ -68,7 +69,7 @@ class NewsTableViewCell: UITableViewCell{
             DispatchQueue.main.async {
                 if let image = UIImage(data: data) {
                     print("image: \(image)")
-                    self.imageNews?.image = image
+                    self.imageNewsCell?.image = image
                 }
             }
         }.resume()

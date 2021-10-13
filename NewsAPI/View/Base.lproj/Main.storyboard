@@ -75,6 +75,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="descriptionNews" destination="2DW-xg-zha" id="0ax-yZ-vJR"/>
+                                            <outlet property="imageNewsCell" destination="I6p-jr-VoT" id="fQP-aM-SKe"/>
                                             <outlet property="titleNews" destination="Rrd-p3-47J" id="AJc-oN-aL2"/>
                                         </connections>
                                     </tableViewCell>
