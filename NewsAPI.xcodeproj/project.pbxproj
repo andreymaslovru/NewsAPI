@@ -19,6 +19,7 @@
 		9F3CCB9127168A1C00BE7268 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3CCB9027168A1C00BE7268 /* NewsViewModel.swift */; };
 		9F3CCB932716905000BE7268 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3CCB922716905000BE7268 /* NewsTableViewCell.swift */; };
 		9F7290EF2717F9BE00EAF983 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7290EE2717F9BE00EAF983 /* WebViewController.swift */; };
+		9F7290F22718185F00EAF983 /* isConnectedToNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7290F12718185F00EAF983 /* isConnectedToNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		9F3CCB9027168A1C00BE7268 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		9F3CCB922716905000BE7268 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		9F7290EE2717F9BE00EAF983 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		9F7290F12718185F00EAF983 /* isConnectedToNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isConnectedToNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		9F3CCB74271587DC00BE7268 /* NewsAPI */ = {
 			isa = PBXGroup;
 			children = (
+				9F7290F02718184100EAF983 /* Utils */,
 				9F9AABB3271694C8009EB963 /* ViewModel */,
 				9F9AABB2271694C1009EB963 /* View */,
 				9F9AABB1271694B8009EB963 /* Controller */,
@@ -81,6 +84,14 @@
 				9F3CCB7E271587DC00BE7268 /* NewsAPI.xcdatamodeld */,
 			);
 			path = NewsAPI;
+			sourceTree = "<group>";
+		};
+		9F7290F02718184100EAF983 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9F7290F12718185F00EAF983 /* isConnectedToNetwork.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		9F9AABAF271694AA009EB963 /* Model */ = {
@@ -203,6 +214,7 @@
 				9F3CCB8F27158A3B00BE7268 /* ApiService.swift in Sources */,
 				9F3CCB76271587DC00BE7268 /* AppDelegate.swift in Sources */,
 				9F3CCB9127168A1C00BE7268 /* NewsViewModel.swift in Sources */,
+				9F7290F22718185F00EAF983 /* isConnectedToNetwork.swift in Sources */,
 				9F3CCB78271587DC00BE7268 /* SceneDelegate.swift in Sources */,
 				9F3CCB80271587DC00BE7268 /* NewsAPI.xcdatamodeld in Sources */,
 			);

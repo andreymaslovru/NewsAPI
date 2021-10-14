@@ -12,14 +12,26 @@ class ViewController: UIViewController {
     var page = 1;
     
     var apiService = ApiService()
+    var isConnectedNetwork = Reachability()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var indicatorLoadingProcess: UIActivityIndicatorView!
+    
+    @IBOutlet weak var refetchBtn: UIButton!
+    @IBAction func refetchRequest(_ sender: Any) {
+    }
     
     private var viewModel = NewsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard Reachability.isConnectedToNetwork() else {
+            self.refetchBtn.isHidden = false
+            return
+        }
+        
+        self.refetchBtn.isHidden = true
         indicatorLoadingProcess.isHidden = false
         indicatorLoadingProcess.startAnimating()
         self.tableView.delegate = self
@@ -34,6 +46,7 @@ class ViewController: UIViewController {
         }
         
         loadData(page: 1)
+        //self.tableView.reloadData()
     }
     
     private func loadData(page: Int) {
