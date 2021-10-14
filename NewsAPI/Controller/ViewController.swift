@@ -60,11 +60,14 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let article = viewModel.cellForRowAt(indexPath: indexPath)
         let sheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         sheet.addAction(UIAlertAction(title: "Go to a web", style: .default, handler: { _ in
-            print("go to the website")
+            guard let url = URL(string: article.url ?? "") else { return }
+            UIApplication.shared.open(url)
         }))
         self.present(sheet, animated: true)
     }
