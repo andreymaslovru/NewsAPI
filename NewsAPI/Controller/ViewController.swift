@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var page = 1;
+    
     var apiService = ApiService()
     
     @IBOutlet weak var tableView: UITableView!
@@ -22,7 +24,7 @@ class ViewController: UIViewController {
         indicatorLoadingProcess.startAnimating()
         self.tableView.delegate = self
         
-        apiService.getNewsData { (result) in
+        apiService.getNewsData(page: page) { (result) in
             
             DispatchQueue.main.async {
                 self.indicatorLoadingProcess.stopAnimating()
@@ -31,14 +33,13 @@ class ViewController: UIViewController {
             }
         }
         
-        loadData()
+        loadData(page: 1)
     }
     
-    private func loadData() {
-        viewModel.fetchNewsData { [weak self] in
-            self?.tableView.dataSource = self
-            self?.tableView.reloadData()
-        }
+    private func loadData(page: Int) {
+        viewModel.fetchNewsData(page: page)
+        self.tableView.dataSource = self
+        self.tableView.reloadData()
     }
 }
 
@@ -57,17 +58,27 @@ extension ViewController: UITableViewDataSource {
 }
 
 extension ViewController: UITableViewDelegate {
-        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            tableView.deselectRow(at: indexPath, animated: true)
-            let sheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-            
-            sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-            sheet.addAction(UIAlertAction(title: "Go to a web", style: .default, handler: { _ in
-                print("go to the website")
-            }))
-            self.present(sheet, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let sheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        sheet.addAction(UIAlertAction(title: "Go to a web", style: .default, handler: { _ in
+            print("go to the website")
+        }))
+        self.present(sheet, animated: true)
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if scrollView.contentOffset.y + 200 > scrollView.contentSize.height - scrollView.frame.size.height {
+            page += 1
+            viewModel.fetchNewsData(page: page)
+            print(page)
+            self.tableView.reloadData()
         }
+    }
 }
+
 
 
 

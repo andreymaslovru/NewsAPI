@@ -50,7 +50,7 @@ class NewsTableViewCell: UITableViewCell{
         
         print("posterImageURL: \(posterImageURL)")
         
-        //self.imageNews.image = nil
+        self.imageNewsCell.image = nil
         
         getImageDataFrom(url: posterImageURL)
     }

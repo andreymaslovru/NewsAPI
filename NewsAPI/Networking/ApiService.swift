@@ -13,10 +13,9 @@ import Foundation
 class ApiService {
     private var dataTask: URLSessionDataTask?
     
-    let url = URL(string: "https://newsapi.org/v2/everything?q=ios&from=2019-04-00&sortBy=publishedAt&apiKey=26eddb253e7840f988aec61f2ece2907&page=3")
-    
-    
-    func getNewsData(completion: @escaping (Result<Articles, Error>) -> Void) {
+    func getNewsData(page: Int, completion: @escaping (Result<Articles, Error>) -> Void) {
+        
+        let url = URL(string: "https://newsapi.org/v2/everything?q=ios&from=2019-04-00&sortBy=publishedAt&apiKey=26eddb253e7840f988aec61f2ece2907&page=\(page)")
       
         guard url != nil else { return print("dkgjkegje")}
         //Create URL Session

@@ -12,12 +12,12 @@ class NewsViewModel {
     private var apiService = ApiService()
     private var articles = [Article]()
 
-    func fetchNewsData(completion: @escaping () -> ()) {
-        apiService.getNewsData { (result) in
+    func fetchNewsData(page: Int) {
+        apiService.getNewsData(page: page) { (result) in
             switch result {
             case .success(let listOf):
-                self.articles = listOf.articles
-                completion()
+                self.articles.append(contentsOf: listOf.articles)
+                //completion()
             case .failure(let error):
                 print("Error fetch json data: \(error)")
             }
