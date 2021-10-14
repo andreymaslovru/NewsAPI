@@ -126,6 +126,40 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="46.875"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="pMJ-tW-Az1">
+            <objects>
+                <viewController storyboardIdentifier="WebView" id="hhM-0s-z5O" customClass="WebViewController" customModule="NewsAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lFO-PF-T3G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XqN-zI-2P0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zTE-5m-koG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XqN-zI-2P0" firstAttribute="bottom" secondItem="zTE-5m-koG" secondAttribute="bottom" constant="34" id="IU4-bU-j5N"/>
+                            <constraint firstItem="zTE-5m-koG" firstAttribute="top" secondItem="XqN-zI-2P0" secondAttribute="top" constant="44" id="KVz-in-dlD"/>
+                            <constraint firstItem="zTE-5m-koG" firstAttribute="trailing" secondItem="XqN-zI-2P0" secondAttribute="trailing" id="VDr-Yz-LK2"/>
+                            <constraint firstItem="XqN-zI-2P0" firstAttribute="leading" secondItem="zTE-5m-koG" secondAttribute="leading" id="yjl-Uk-qro"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="WKWebView" destination="XqN-zI-2P0" id="86k-YA-Ygi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HRF-VD-yXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="714.49275362318849" y="46.875"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

@@ -66,8 +66,10 @@ extension ViewController: UITableViewDelegate {
         
         sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         sheet.addAction(UIAlertAction(title: "Go to a web", style: .default, handler: { _ in
-            guard let url = URL(string: article.url ?? "") else { return }
-            UIApplication.shared.open(url)
+            let st = UIStoryboard(name: "Main", bundle: nil)
+            let vc = st.instantiateViewController(withIdentifier: "WebView") as! WebViewController
+            vc.url = article.url!
+            self.present(vc, animated: true)
         }))
         self.present(sheet, animated: true)
     }
