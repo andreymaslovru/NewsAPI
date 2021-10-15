@@ -15,10 +15,10 @@ class ApiService {
     
     func getNewsData(page: Int, completion: @escaping (Result<Articles, Error>) -> Void) {
         
-//        let url = URL(string: "https://newsapi.org/v2/everything?q=ios&from=2019-04-00&sortBy=publishedAt&apiKey=26eddb253e7840f988aec61f2ece2907&page=\(page)")
+        let url = URL(string: "https://newsapi.org/v2/everything?q=ios&from=2019-04-00&sortBy=publishedAt&apiKey=26eddb253e7840f988aec61f2ece2907&page=\(page)")
         
-        let url = URL(string:"https://newsapi.org/v2/top-headlines?country=de&category=business&apiKey=5baf838cc2b941e2990fe64b6fb3145c")
-      
+//        let url = URL(string:"https://newsapi.org/v2/top-headlines?country=de&category=business&apiKey=5baf838cc2b941e2990fe64b6fb3145c")
+//      
         guard url != nil else { return print("dkgjkegje")}
         //Create URL Session
         

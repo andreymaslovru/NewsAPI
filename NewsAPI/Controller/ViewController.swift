@@ -91,7 +91,7 @@ extension ViewController: UITableViewDelegate {
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if scrollView.contentOffset.y + 200 > scrollView.contentSize.height - scrollView.frame.size.height {
+        if scrollView.contentOffset.y > scrollView.contentSize.height - scrollView.frame.size.height {
             page += 1
             viewModel.fetchNewsData(page: page)
             print(page)
