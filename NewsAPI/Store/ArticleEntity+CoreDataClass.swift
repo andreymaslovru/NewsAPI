@@ -1,5 +1,5 @@
 //
-//  News+CoreDataClass.swift
+//  ArticleEntity+CoreDataClass.swift
 //  NewsAPI
 //
 //  Created by Андрей Маслов on 16.10.2021.
@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-@objc(News)
-public class News: NSManagedObject {
+@objc(ArticleEntity)
+public class ArticleEntity: NSManagedObject {
 
 }

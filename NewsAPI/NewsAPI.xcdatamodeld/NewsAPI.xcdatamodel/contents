@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="News" representedClassName="News" syncable="YES">
-        <attribute name="imageURL" optional="YES" attributeType="String"/>
-        <attribute name="subtitle" optional="YES" attributeType="String"/>
+    <entity name="ArticleEntity" representedClassName="ArticleEntity" syncable="YES">
+        <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="publishedAt" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <attribute name="url" optional="YES" attributeType="String"/>
+        <attribute name="urlToImage" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="News" representedClassName="News" syncable="YES" codeGenerationType="class">
+        <attribute name="descriptionNew" optional="YES" attributeType="String"/>
+        <attribute name="publishedAt" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <attribute name="urlToImage" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="News" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="News" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="ArticleEntity" positionX="-63" positionY="18" width="128" height="134"/>
     </elements>
 </model>

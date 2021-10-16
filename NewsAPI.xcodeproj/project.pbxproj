@@ -20,8 +20,9 @@
 		9F3CCB932716905000BE7268 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3CCB922716905000BE7268 /* NewsTableViewCell.swift */; };
 		9F7290EF2717F9BE00EAF983 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7290EE2717F9BE00EAF983 /* WebViewController.swift */; };
 		9F7290F22718185F00EAF983 /* isConnectedToNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7290F12718185F00EAF983 /* isConnectedToNetwork.swift */; };
-		9FFBBF02271A64EF005785ED /* News+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFBBF00271A64EF005785ED /* News+CoreDataClass.swift */; };
-		9FFBBF03271A64EF005785ED /* News+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFBBF01271A64EF005785ED /* News+CoreDataProperties.swift */; };
+		9F857CE7271AC202003C849D /* ArticleEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F857CE5271AC202003C849D /* ArticleEntity+CoreDataClass.swift */; };
+		9F857CE8271AC202003C849D /* ArticleEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F857CE6271AC202003C849D /* ArticleEntity+CoreDataProperties.swift */; };
+		9FFBBF16271AB563005785ED /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFBBF15271AB563005785ED /* CoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +41,9 @@
 		9F3CCB922716905000BE7268 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		9F7290EE2717F9BE00EAF983 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		9F7290F12718185F00EAF983 /* isConnectedToNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isConnectedToNetwork.swift; sourceTree = "<group>"; };
-		9FFBBF00271A64EF005785ED /* News+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "News+CoreDataClass.swift"; sourceTree = "<group>"; };
-		9FFBBF01271A64EF005785ED /* News+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "News+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9F857CE5271AC202003C849D /* ArticleEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9F857CE6271AC202003C849D /* ArticleEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9FFBBF15271AB563005785ED /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +146,9 @@
 		9FFBBF04271A64FA005785ED /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				9FFBBF00271A64EF005785ED /* News+CoreDataClass.swift */,
-				9FFBBF01271A64EF005785ED /* News+CoreDataProperties.swift */,
+				9F857CE5271AC202003C849D /* ArticleEntity+CoreDataClass.swift */,
+				9F857CE6271AC202003C849D /* ArticleEntity+CoreDataProperties.swift */,
+				9FFBBF15271AB563005785ED /* CoreData.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -224,12 +227,13 @@
 				9F3CCB8D2715886C00BE7268 /* Model.swift in Sources */,
 				9F7290EF2717F9BE00EAF983 /* WebViewController.swift in Sources */,
 				9F3CCB7A271587DC00BE7268 /* ViewController.swift in Sources */,
-				9FFBBF02271A64EF005785ED /* News+CoreDataClass.swift in Sources */,
-				9FFBBF03271A64EF005785ED /* News+CoreDataProperties.swift in Sources */,
 				9F3CCB932716905000BE7268 /* NewsTableViewCell.swift in Sources */,
+				9FFBBF16271AB563005785ED /* CoreData.swift in Sources */,
 				9F3CCB8F27158A3B00BE7268 /* ApiService.swift in Sources */,
 				9F3CCB76271587DC00BE7268 /* AppDelegate.swift in Sources */,
+				9F857CE7271AC202003C849D /* ArticleEntity+CoreDataClass.swift in Sources */,
 				9F3CCB9127168A1C00BE7268 /* NewsViewModel.swift in Sources */,
+				9F857CE8271AC202003C849D /* ArticleEntity+CoreDataProperties.swift in Sources */,
 				9F7290F22718185F00EAF983 /* isConnectedToNetwork.swift in Sources */,
 				9F3CCB78271587DC00BE7268 /* SceneDelegate.swift in Sources */,
 				9F3CCB80271587DC00BE7268 /* NewsAPI.xcdatamodeld in Sources */,

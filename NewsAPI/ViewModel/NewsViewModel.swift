@@ -9,15 +9,18 @@ import Foundation
 import UIKit
 
 class NewsViewModel {
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     private var apiService = ApiService()
     private var articles = [Article]()
+    private var news = [News]()
 
     func fetchNewsData(page: Int) {
         apiService.getNewsData(page: page) { (result) in
             switch result {
             case .success(let listOf):
                 self.articles.append(contentsOf: listOf.articles)
-                //completion()
             case .failure(let error):
                 print("Error fetch json data: \(error)")
             }
@@ -33,5 +36,19 @@ class NewsViewModel {
     
     func cellForRowAt(indexPath: IndexPath) -> Article {
         return articles[indexPath.row]
+    }
+    
+    //core data
+    
+    func getAllNews() {
+        do {
+            news = try context.fetch(News.fetchRequest())
+        } catch let error {
+            print("error fetch items from core data: \(error)")
+        }
+    }
+    
+    func addNewsInList(list: [Article]) {
+        //news.append(contentsOf: list)
     }
 }
