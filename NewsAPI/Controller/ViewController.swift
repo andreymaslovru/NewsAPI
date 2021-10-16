@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         indicatorLoadingProcess.isHidden = false
         indicatorLoadingProcess.startAnimating()
         self.tableView.delegate = self
+        self.tableView.dataSource = self
         
         guard Reachability.isConnectedToNetwork() else {
             self.refetchBtn.isHidden = false
