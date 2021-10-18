@@ -28,7 +28,7 @@ class NewsTableViewCell: UITableViewCell{
     
     // Setup values
     
-    func selCellWithValuesOf(_ article: Article) {
+    func selCellWithValuesOf(_ article: ArticleEntity) {
         updateUI(title: article.title, description: article.description,
                  imageUrl: article.urlToImage,
                  dateNews: article.publishedAt

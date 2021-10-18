@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UpdateTableViewDelegate {
+    
+    
     
     var page = 1;
     
@@ -32,11 +34,11 @@ class ViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        guard Reachability.isConnectedToNetwork() else {
-            self.refetchBtn.isHidden = false
-            self.indicatorLoadingProcess.isHidden = true
-            return
-        }
+//        guard Reachability.isConnectedToNetwork() else {
+//            self.refetchBtn.isHidden = false
+//            self.indicatorLoadingProcess.isHidden = true
+//            return
+//        }
         
         self.refetchBtn.isHidden = true
         
@@ -58,14 +60,22 @@ class ViewController: UIViewController {
         self.tableView.dataSource = self
         self.tableView.reloadData()
     }
+    
+    func reloadData(sender: NewsViewModel) {
+        self.tableView.reloadData()
+    }
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NewsTableViewCell
 
-        let article = viewModel.cellForRowAt(indexPath: indexPath)
-        cell.selCellWithValuesOf(article)
+        let object = viewModel.object(indexPath: indexPath)
+        if let articleCell = cell as? NewsTableViewCell {
+            if let article = object {
+                articleCell.selCellWithValuesOf(article as! ArticleEntity)
+            }
+        }
         return cell
     }
 
@@ -78,14 +88,14 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let article = viewModel.cellForRowAt(indexPath: indexPath)
+        let article = viewModel.object(indexPath: indexPath)
         let sheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         sheet.addAction(UIAlertAction(title: "Go to a web", style: .default, handler: { _ in
             let st = UIStoryboard(name: "Main", bundle: nil)
             let vc = st.instantiateViewController(withIdentifier: "WebView") as! WebViewController
-            vc.url = article.url!
+            vc.url = article!.url ?? ""
             self.present(vc, animated: true)
         }))
         self.present(sheet, animated: true)

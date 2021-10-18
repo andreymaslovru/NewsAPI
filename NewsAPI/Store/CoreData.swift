@@ -48,15 +48,14 @@ class CoreData {
         // perform - Make sure that this code of block will be executed on the proper Queue
         // In this case this code should be perform off the main Queue
         context.perform {
+            print("11123123123123123    \(String(describing: Thread.isMainThread))")
             for article in articles {
                 let articleEntity = ArticleEntity(context: context)
                 articleEntity.title = article.title
-//                articleEntity.year = movie.year
-//                guard let rate = movie.rate else {return}
-//                movieEntity.rate = String(rate)
-//                movieEntity.posterImage = movie.posterImage
-//                movieEntity.backdropImage = movie.backdropImage
-//                movieEntity.overview = movie.overview
+                articleEntity.desc = article.description
+                articleEntity.publishedAt = article.publishedAt
+                articleEntity.urlToImage = article.urlToImage
+                articleEntity.url = article.url
             }
             // Save Data
             do {
