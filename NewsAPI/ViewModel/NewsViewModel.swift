@@ -14,7 +14,7 @@ class NewsViewModel: UIViewController {
     
     private var apiService = ApiService()
     private var articles = [Article]()
-    private var news = [News]()
+    private var news = [ArticleEntity]()
 
     func fetchNewsData(page: Int) {
         apiService.getNewsData(page: page) { (result) in
@@ -52,7 +52,7 @@ class NewsViewModel: UIViewController {
     
     func getAllNews() {
         do {
-            news = try context.fetch(News.fetchRequest())
+            news = try context.fetch(ArticleEntity.fetchRequest())
         } catch let error {
             print("error fetch items from core data: \(error)")
         }
