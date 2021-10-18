@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class NewsViewModel {
+class NewsViewModel: UIViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -22,9 +22,19 @@ class NewsViewModel {
             case .success(let listOf):
                 self.articles.append(contentsOf: listOf.articles)
             case .failure(let error):
+                self.showAlertWith(title: "Error connected to network", message: "Error")
                 print("Error fetch json data: \(error)")
             }
         }
+    }
+    
+    func showAlertWith(title: String, message: String, style: UIAlertController.Style = .alert) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
+        let action = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        alertController.addAction(action)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func numberOfRowsInSection(section: Int) -> Int {
