@@ -25,5 +25,5 @@ class Reachability {
         let isReachable = flags.contains(.reachable)
         let needsConnection = flags.contains(.connectionRequired)
         return (isReachable && !needsConnection)
-    } // isConnectedToNetwork
-} // class Reachabilit`
+    } 
+}

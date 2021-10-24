@@ -47,6 +47,8 @@ class ApiService {
                 //Parse the data
                 let decoder = JSONDecoder()
                 let JSONData = try decoder.decode(Articles.self, from: data)
+            
+                CoreData.sharedInstance.saveDataOf(articles: JSONData as? [Article] ?? [])
                 
                 DispatchQueue.main.async {
                     completion(.success(JSONData))

@@ -11,12 +11,15 @@ import UIKit
 class NewsViewModel: UIViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var isConnectedNetwork = Reachability()
     
     private var apiService = ApiService()
     private var articles = [Article]()
-    private var news = [ArticleEntity]()
 
     func fetchNewsData(page: Int) {
+        guard Reachability.isConnectedToNetwork() else {
+            return
+        }
         apiService.getNewsData(page: page) { (result) in
             switch result {
             case .success(let listOf):
@@ -27,6 +30,8 @@ class NewsViewModel: UIViewController {
             }
         }
     }
+    
+    
     
     func showAlertWith(title: String, message: String, style: UIAlertController.Style = .alert) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: style)

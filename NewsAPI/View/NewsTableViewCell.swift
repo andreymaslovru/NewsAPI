@@ -18,15 +18,9 @@ class NewsTableViewCell: UITableViewCell{
         super.awakeFromNib()
         imageNewsCell.layer.cornerRadius = 10
     }
-//
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//        
-//    }
     
     private var urlString: String = ""
     
-    // Setup values
     
     func selCellWithValuesOf(_ article: Article) {
         updateUI(title: article.title, description: article.description,

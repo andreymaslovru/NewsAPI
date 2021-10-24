@@ -50,7 +50,6 @@ class ViewController: UIViewController {
         }
         
         loadData(page: 1)
-        //self.tableView.reloadData()
     }
     
     private func loadData(page: Int) {
